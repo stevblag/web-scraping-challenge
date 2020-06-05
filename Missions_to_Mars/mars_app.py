@@ -15,7 +15,7 @@ def home():
     # Find data
     mars_facts = mongo.db.collection.find_one()
 
-    # Return template and data
+    # Return template & data
     return render_template("index.html", mars=mars_facts)
 
 # Trigger scrape
