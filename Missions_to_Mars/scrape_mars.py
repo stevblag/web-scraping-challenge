@@ -36,7 +36,7 @@ def scrape_mars_news():
         news_title = soup.find('div', class_='content_title').find('a').text
         news_p = soup.find('div', class_='article_teaser_body').text
 
-        # Dictionary entry from MARS NEWS
+        # Dictionary
         mars_info['news_title'] = news_title
         mars_info['news_paragraph'] = news_p
 
@@ -52,7 +52,7 @@ def scrape_mars_image():
 
         # Splinter module
         featured_image_url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
-        browser.visit(featured_image_url)# Visit Mars Space Images through splinter module
+        browser.visit(featured_image_url)
 
         # HTML object 
         html_image = browser.html
